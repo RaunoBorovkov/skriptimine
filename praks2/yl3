@@ -1,0 +1,12 @@
+#! /bin/bash
+#
+# muljed teisest tunnist
+#
+# skripti algus
+#
+echo "Rauno Borovkov"
+echo "ISP117"
+echo "Aine muutub järjest põnevamaks, annab võimaluse leida erinevaid lahendusi"
+echo "Oskan kasutada failide väljastamist scripti abil erinevas järjekorras"
+#
+# Skripti lõpp
