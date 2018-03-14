@@ -1,10 +1,12 @@
 #! /bin/bash
 #
-# muljed
+# kasutajate nimekiri kujul Perenimi, Eesnimi
 #
-echo "Rauno Borovkov" #
-echo "ISP117" #
-echo "Aine on põnev ming paneb ise lahendusi otsima, et kuidas saaks asja lahendada kiiremini ja efektiivsemalt" #
-echo "Loodan, et saan aine kohta palju rohkem teada, sest see on põnev" #
+# skripti algus
 #
+who | cut -f1 -d" " | cut -f2 -d"." > perenimi
+who | cut -f1 -d" " | cut -f1 -d"." > eesnimi
+paste -d"." perenimi eesnimi > nimed
+cat nimed | sort | uniq
 #
+# skripti lõpp
