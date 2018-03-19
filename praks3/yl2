@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#.log
+#
+find /var -name \*.log 2> ./error -exec wc -l {} +| sort -rn | cut -f2,3,4 -d"/" | grep "var"
+#
