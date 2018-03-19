@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+echo -n skriptimine
+echo -n " at "
+echo -e `uptime | cut -f1 -d","`
