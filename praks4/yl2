@@ -1,0 +1,33 @@
+#!/bin/bash
+#Küsin kandiku pikkust
+echo "Sisestage kandiku pikkus sentimeetrites:"
+read pikkus
+#Küsin kandiku laiust
+echo "Sisestage kandiku laius:"
+read laius
+#küsin küpsise pikkuse
+echo "Sisestage palun küpsiste pikkus sentimeetrites:"
+read kpikkus
+#Küsin küpsise laiuse
+echo "Sisestage palun küpsise laius sentimeetrites:"
+read klaius
+#Küsin mitu küpsist on pakis
+echo "Mitu küpsist on pakis?:"
+read mitu
+#küsin kasutajalt mitu kihti ta soovib
+echo "Mitu kihti te soovite valmistada?:"
+read kihtidearv
+#Leian kandiku pindala
+pindala=`expr $pikkus \* $laius`
+#leian küpsiste pindala
+kogus=`expr $kpikkus / $klaius`
+#Leian mitu küpsist on kihis
+yheskihis=`expr $pindala / $kogus`
+#Väljastan info kus on varasemad arvutused
+echo "Kandiku pindala on $pindala sentimeetrit ja küpsiste pindala $kogus sentrimeetrit, kihis on $yheskihis küpsist"
+#Leian küpsisepakkide arvu
+yheskihispakke=`expr $yheskihis / $mitu`
+#arvutan palju on vaja küpsisepakke
+kokku=`expr $yheskihispakke \* $kihtidearv`
+#väljastan palju pakke vaja
+echo "Poest on vaja osta $kokku küpsisepakki"
