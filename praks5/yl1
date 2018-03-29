@@ -1,21 +1,15 @@
 #!/bin/bash
 #
-# Kolmnurga pindala arvutamine
+# see arvutab kolmnurga hypotenuusi
 #
-# Skript algab
 #
-echo
-echo -n "Sisesta a kylje vaartus: "
-read a
-echo -n "Sisesta b kylje vaartus: "
-read b
-echo -n "Sisesta c kylje vaartus: "
-read c
+echo "Palun sisesta kolmnurga kylgede pikkused: (cm)"
+read a b
+a1=`expr $a \* $a`
+b1=`expr $b \* $b`
+d=`expr $a1 \+ $b1`
+c=$(echo "$d" | awk '{print sqrt($1)}')
+echo "hüpotenuus on: $c"
 #
-# Arvutamine
 #
-p=`echo "scale=2;($a+$b+$c)/2" | bc`               #pindala
-s=`echo "scale=2;sqrt($p*($p-$a)*($p-$b)*($p-$c))" | bc`
-echo "Pindala = $s"
 #
-#skripti lõpp
