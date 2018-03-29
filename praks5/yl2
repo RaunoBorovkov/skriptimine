@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Kolmnurga pindala arvutamine
+#
+# Skript algab.
+#
+echo
+echo -n "Sisesta a kylje vaartus: "
+read a
+echo -n "Sisesta b kylje vaartus: "
+read b
+echo -n "Sisesta c kylje vaartus: "
+read c
+#
+# Arvutamine
+#
+p=`echo "scale=2;($a+$b+$c)/2" | bc`               #pindala
+s=`echo "scale=2;sqrt($p*($p-$a)*($p-$b)*($p-$c))" | bc`
+echo "Pindala = $s"
+#
+#skripti lõpp
