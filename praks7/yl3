@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo -n "Sisesta aja väärtus: "
+read aeg
+echo -n "Sisesta kasutajanimi: "
+read kasutaja
+echo -n "Sisesta aja väärtus: "
+read aeg
+
+if [[ $aeg -ge 6 ]] && [[ $aeg -le 11 ]]
+then
+	echo "Tere hommikust"
+	echo "Tere hommikust, $kasutaja"
+elif [[ $aeg -ge 12 ]] && [[ $aeg -le 17 ]]
+then
+	echo "Tere päevast"
+	echo "Tere päevast, $kasutaja"
+elif [[ $aeg -ge 18 ]] && [[ $aeg -le 21 ]]
+then
+	echo "Tere õhtust"
+	echo "Tere õhtust, $kasutaja"
+elif [[ $aeg -ge 22 ]] && [[ $aeg -le 24 ]]
+then
+	echo "Head ööd"
+	echo "Head ööd, $kasutaja"
+elif [[ $aeg -ge 1 ]] && [[ $aeg -le 5 ]]
+then
+	echo "Head ööd"
+	echo "Head ööd, $kasutaja"
+fi
