@@ -1,0 +1,27 @@
+#!/bin/bash
+# Skript vanuse määramine
+#
+echo -n "Sisesta oma vanus :" #vanuse sisestamine
+read vanus #vanus
+
+
+if [[ $vanus -ge 0 ]] && [[ $vanus -le 11 ]] #Vanus vahemikus 0-11
+then
+	echo "Oled Laps"
+
+fi
+
+if [[ $vanus -ge 12 ]] && [[ $vanus -le 17 ]]
+then
+	echo "oled nooruk"
+fi
+
+if [[ $vanus -ge 18 ]] && [[ $vanus -le 62 ]]
+then
+	echo "Oled täiskasvanu"
+fi
+
+if [[ $vanus -ge 63 ]] && [[ $canus -le 62 ]]
+then
+	echo "oled seenior"
+fi
