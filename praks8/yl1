@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Kümne esimese arvu väljastamine foreach tsükliga
+
+for arv in {1..10}
+do
+	echo $arv
+done
