@@ -22,7 +22,7 @@ do
 		# tühikud
 		for((j = 2; j < $tarn;j++))
 		do
-			echo -n " "
+			echo -n "  "
 		done
 	echo -n "* "
 	fi
